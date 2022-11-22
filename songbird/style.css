@@ -154,27 +154,27 @@ footer a:hover img {
   }
 }
 .play {
-  width: 300px;
-  height: 60px;
+  padding: 20px 80px;
   font-family: Montserrat;
   font-size: 36px;
-  background: inherit;
+  border: 2px black solid;
   border-radius: 20px;
-  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 .play:hover {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   transition: all 0.3s ease-in-out;
 }
-.rangeTime {
+.range-time {
   -webkit-appearance: none;
-  width: 90%;
+  width: 100%;
   height: 3px;
   border-radius: 5px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.449), rgb(0, 103, 69));
 }
-.rangeTime::-webkit-slider-thumb {
+.range-time::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
@@ -188,16 +188,59 @@ footer a:hover img {
   align-items: center;
   margin-top: 20px;
 }
-.range img {
-  border: 1px black solid;
+.play-audio {
+  margin: 0 7px 0 0;
+  border: 2px black solid;
   border-radius: 50%;
+  cursor: pointer;
 }
-.audio p {
-  margin-left: 72px;
-  margin-top: -16px;
+.play-audio:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+.timer {
+  margin-left: 60px;
+  margin-top: -15px;
+
+}
+.volume {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.volume:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+.range-volume {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.449), rgb(0, 103, 69));
+}
+.range-volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 103, 69, 0.4);
+  cursor: pointer;
+  transform: rotate(90deg);
 }
 
 @media (max-width: 1000px) {
+  .range-volume {
+    width: 50px;
+  }
+  .range img {
+    width: 35px;
+    height: 35px;
+  }
+  .timer {
+    margin-left: 45px;
+    font-size: 14px;
+  }
   .questions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -227,6 +270,9 @@ footer a:hover img {
   .logo h1 span {
     margin-left: -7px;
   }
+  .range-volume {
+    width: 35px;
+  }
   .questions {
     font-size: 14px;
   }
@@ -240,10 +286,19 @@ footer a:hover img {
 }
 
 @media (max-width: 470px) {
+  header .container {
+    width: 95vw;
+  }
   .questions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+  }
+  .question div {
+    padding: 0;
+  }
+  .range-volume {
+    width: 70px;
   }
   .main h1 span {
     margin-left: 0;
@@ -283,7 +338,7 @@ footer a:hover img {
     font-size: 20px;
   }
   .play {
-    width: 200px;
+    padding: 15px 50px;
     font-size: 28px;
   }
 }
