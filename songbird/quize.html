@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-score">
+        <div class="logo">
+          <img src="./images/songbird_logo.png" alt="Логотип «SongBird»" width="80px" height="80px">
+          <h1> Song <span> Bird </span> </h1>
+        </div>
+        <a href="index.html"> Главная </a>
+        <div class="score">
+          <p> Счет: &nbsp; </p>
+          <span> 0 </span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <nav class="questions">
+      <p> Разминка </p>
+      <p> Воробьиные </p>
+      <p> Лесные птицы </p>
+      <p> Певчие птицы </p>
+      <p> Хищные птицы </p>
+      <p> Морские птицы </p>
+    </nav>
+  </div>
+  <main class="quize">
+    <div class="container">
+      <div class="question">
+        <img src="./images/unknown_bird.jpg" alt="Неизвестная птица" class="image" width="280px" height="200px">
+        <div>
+          <h2> Какая птица? </h2>
+          <div class="line"></div>
+          <div class="audio">
+            <div class="range">
+              <img src="images/pause.png" class="play_audio">
+              <input type="range" class="rangeTime" id="range" value="0">
+            </div>
+            <p id="timer">00:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="answers"></div>
+      <div class="answer"></div>
+      <button class="next-level"> Следующий уровень </button>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p class="year"> 2022 </p>
+      <a href="https://github.com/Daryaisme" target="_blank">
+        <img src="./images/github_logo.png" alt="Логотип GitHub" width="40px" height="40px">
+      </a>
+      <a href="https://rs.school/js/" target="_blank">
+        <img src="./images/rs_school_js.svg" alt="Логотип RSSchool" width="100px" height="40px">
+      </a>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
