@@ -150,10 +150,20 @@ function clearSecondPlayer () {
   let range = document.querySelector('.range-time-2')
   let timePicker = document.querySelector('.timer-2')
   let playImg = document.querySelector('.play-audio-2')
+  let birdImg = document.querySelector('.image-2')
+  let birdName = document.querySelector('.bird h2')
+  let timer = document.querySelector('.range-time-2')
+  let species = document.querySelector('.bird h3')
+  let description = document.querySelector('.about')
 
   range.value = 0
   timePicker.innerHTML = "00:00:00"
   playImg.src = './images/pause.png'
+  birdImg.src = './images/unknown_bird.jpg'
+  birdName.innerHTML = 'Какая птица?'
+  timer.innerHTML = '00:00:00'
+  species.innerHTML = ''
+  description.innerHTML = ''
 
   currentAudio && currentAudio.classList.contains('active') ? currentAudio.pause() && currentAudio.classList.remove('active') : true
 }
