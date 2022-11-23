@@ -260,28 +260,30 @@ function createPage(question, sum) {
   let score = document.querySelector('.score span')
 
   res = 5 
-  console.log(res)
+  console.log(Array.from(variants).map(variant => variant.innerHTML))
   Array.from(variants).forEach((variant, i) => {
     variant.parentElement.addEventListener('click', () => {
       createSecondPlayer(birdsData[question][i])
       if (answer.name != variant.innerHTML) {
         if (markers[i].style.backgroundColor != 'red') {
-          if (Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length == 0)
+          if (Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length == 0){
             markers[i].style.backgroundColor = 'red'
             res--
-            if (Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length == 0)
-              playIncorrect()
+            playIncorrect()
+          }
         }
-      }
-      else {        
-        markers[i].style.backgroundColor = 'green'
-        birdImg.src = answer.image
-        birdName.innerHTML = answer.name
-        sum = sum + res
-        score.innerHTML = sum
-        buttonNext.disabled = false
-        currentAudio?.pause()
-        playCorrect()
+      } 
+      else {   
+        if(!Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length){
+          markers[i].style.backgroundColor = 'green'
+          birdImg.src = answer.image
+          birdName.innerHTML = answer.name
+          sum = sum + res
+          score.innerHTML = sum
+          buttonNext.disabled = false
+          currentAudio?.pause()
+          playCorrect()
+        }   
       }
       console.log(res)
     })
