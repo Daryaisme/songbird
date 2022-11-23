@@ -252,11 +252,11 @@ footer a:hover img {
   overflow: hidden;
 }
 .answers {
-  width: 45%;
+  width: 30%;
   height: 307px;
 }
 .answer {
-  width: 46%;
+  width: 64%;
   padding: 20px;
   border: 1px rgba(0, 0, 0, 0.449) solid;
   display: flex;
@@ -266,6 +266,10 @@ footer a:hover img {
   display: flex;
   margin: 0;
   margin-bottom: 15px;
+}
+.bird > div {
+  width: 100%;
+  margin-left: 20px;
 }
 .bird h2 {
   margin-bottom: 10px;
@@ -281,6 +285,7 @@ footer a:hover img {
   align-items: center;
   border: 1px rgba(0, 0, 0, 0.449) solid;
   border-bottom: none;
+  cursor: pointer;
 }
 .answers p {
   font-size: 24px;
@@ -290,7 +295,7 @@ footer a:hover img {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.449);
+  background: rgba(0, 0, 0, 0.447);
   margin: 0 20px;
 }
 footer {
@@ -307,16 +312,6 @@ footer {
 }
 
 @media (max-width: 1400px) {
-  .answers {
-    width: 30%;
-  }
-  .answer {
-    width: 64%;
-  }
-  .bird > div {
-    width: 50%;
-    margin-left: 20px;
-  }
   .congratulations {
     width: 80%;
   }
@@ -338,9 +333,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
-  }
-  .questions p {
-    margin: 0 auto;
   }
   .question h2 {
     margin-bottom: 3px;
@@ -372,9 +364,6 @@ footer {
   }
   .logo h1 span {
     margin-left: -7px;
-  }
-  .bird > div {
-    width: 55%;
   }
   .range-volume {
     width: 35px;
