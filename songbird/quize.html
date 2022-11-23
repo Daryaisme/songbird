@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
+  <title> SongBird </title>
 </head>
 <body>
   <header>
@@ -51,8 +51,52 @@
           </div>
         </div>
       </div>
-      <div class="answers"></div>
-      <div class="answer"></div>
+      <div class="after-quetion">
+        <div class="answers">
+          <div style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+            <div class="marker"></div>
+            <p class="ans" id="first-answer"></p>
+          </div>
+          <div>
+            <div class="marker"></div>
+            <p class="ans" id="second-answer"></p>
+          </div>
+          <div>
+            <div class="marker"></div>
+            <p class="ans" id="third-answer"></p>
+          </div>
+          <div>
+            <div class="marker"></div>
+            <p class="ans" id="fourth-answer"></p>
+          </div>
+          <div>
+            <div class="marker"></div>
+            <p class="ans" id="fifth-answer"></p>
+          </div>
+          <div style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; border-bottom: 1px rgba(0, 0, 0, 0.449) solid;">
+            <div class="marker"></div>
+            <p class="ans" id="sixth-answer"></p>
+          </div>
+        </div>
+        <div class="answer">
+          <div class="bird">
+            <img src="./images/unknown_bird.jpg" alt="Неизвестная птица" class="image-2" width="280px" height="200px">
+            <div>
+              <h2> Какая птица? </h2>
+              <div class="line"></div>
+              <h3></h3>
+              <div class="audio-2">
+                <div class="range-2">
+                  <img src="./images/pause.png" class="play-audio-2" width="50px" height="50px">
+                  <input type="range" class="range-time-2" value="0"></input>
+                </div>
+                <p class="timer-2"> 00:00:00 </p>
+              </div>
+            </div>
+          </div>
+          <div class="about"></div>
+        </div>
+      </div>
       <button class="next-level"> Следующий уровень </button>
     </div>
   </main>
@@ -67,6 +111,7 @@
       </a>
     </div>
   </footer>
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./birds.js"></script>
 </body>
 </html>
