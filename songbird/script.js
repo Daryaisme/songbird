@@ -75,10 +75,16 @@ function clearFirstPlayer () {
   let range = document.getElementsByClassName('range-time')[0]
   let timePicker = document.getElementsByClassName('timer')[0]
   let playImg = document.getElementsByClassName("play-audio")[0]
+  let birdImg = document.querySelector('.image')
+  let birdName = document.querySelector('.question h2')
+  let timer = document.querySelector('.range-time')
 
   range.value = 0
   timePicker = "00:00:00"
   playImg.src = './images/pause.png'
+  birdImg.src = './images/unknown_bird.jpg'
+  birdName.innerHTML = 'Какая птица?'
+  timer.innerHTML = '00:00:00'
 }
 
 async function createSecondPlayer (bird) {
@@ -182,6 +188,8 @@ function createVariants (question) {
 
   for (let i = 0; i < 6; i++) {
     let variant = document.createElement('div')
+    if (i == 0) variant.classList.add('top')
+    if (i == 5) variant.classList.add('bottom')
 
     let marker = document.createElement('div')
     marker.classList.add('marker')
@@ -192,6 +200,18 @@ function createVariants (question) {
     variant.append(marker, paragraph)
     box.append(variant)
   }
+}
+
+function playCorrect () {
+  let audio = new Audio('./audios/correct.mp3')
+
+  audio.play()
+}
+
+function playIncorrect () {
+  let audio = new Audio('./audios/incorrect.mp3')
+
+  audio.play()
 }
 
 let buttonNext = document.querySelector('.next-level')
@@ -249,6 +269,8 @@ function createPage(question, sum) {
           if (Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length == 0)
             markers[i].style.backgroundColor = 'red'
             res--
+            if (Array.from(markers).filter((marker) => (marker.style.backgroundColor == 'green')).length == 0)
+              playIncorrect()
         }
       }
       else {        
@@ -259,6 +281,7 @@ function createPage(question, sum) {
         score.innerHTML = sum
         buttonNext.disabled = false
         currentAudio?.pause()
+        playCorrect()
       }
       console.log(res)
     })

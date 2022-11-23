@@ -291,6 +291,15 @@ footer a:hover img {
   font-size: 24px;
   margin-left: 0;
 }
+.top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.answers .bottom {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 1px rgba(0, 0, 0, 0.449) solid;
+}
 .marker {
   width: 10px;
   height: 10px;
