@@ -20,13 +20,16 @@ async function createPage (question = 0, sum = 0) {
   let birdName_2 = document.querySelector('.bird h2')
   let birdSpecies = document.querySelector('.bird h3')
 
-  let range_2 = document.getElementsByClassName('range-time-2')[0]
-  let timePicker_2 = document.getElementsByClassName('timer-2')[0]
-  let playImg_2 = document.getElementsByClassName("play-audio-2")[0]
-
   birdImg_2.src = './images/unknown_bird.jpg'
   birdName_2.innerHTML = 'Какая птица?'
   birdSpecies.innerHTML = ''
+  
+  let aboutBird = document.querySelector('.about')
+  aboutBird.innerHTML = ''
+
+  let range_2 = document.getElementsByClassName('range-time-2')[0]
+  let timePicker_2 = document.getElementsByClassName('timer-2')[0]
+  let playImg_2 = document.getElementsByClassName("play-audio-2")[0]
 
   let markers = Array.from(document.getElementsByClassName('marker'))
   markers.forEach((marker) => {
