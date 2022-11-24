@@ -229,6 +229,7 @@ let buttonNext = document.querySelector('.next-level')
 buttonNext.addEventListener('click', () => {
   let s = document.querySelector('.score span')
   if (question != 5) {
+    currentAudio.pause()
     question++
     clearBullets()
     clearFirstPlayer()

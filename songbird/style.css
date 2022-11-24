@@ -422,9 +422,6 @@ footer {
   .question div {
     padding: 0;
   }
-  .audio-2 {
-    display: none;
-  }
   .bird {
     width: 100%;
     flex-direction: column;
