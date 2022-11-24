@@ -454,12 +454,6 @@ footer {
   .question {
     display: grid;
   }
-  .question h2 {
-    display: none;
-  }
-  .line {
-    display: none;
-  }
   .score {
     font-size: 20px;
   }
