@@ -308,11 +308,16 @@ function congratulations(sum) {
   nav.innerHTML = ''
   
   let paragraph = document.createElement('h3')
-  paragraph.innerHTML = 'Поздравляем, вы набрали ' + sum + ' баллов!'
+  paragraph.innerHTML = 'Поздравляем, вы набрали ' + sum + ' балл(а/ов)!'
 
   paragraph.classList.add('congratulations')
 
-  main.append(paragraph)
+  let but = document.createElement('a')
+  but.href = './quize.html'
+  but.innerHTML = 'Повторить!'
+  but.classList.add('play-2')
+
+  main.append(paragraph, but)
 }
 
 createPage(question, sum)
